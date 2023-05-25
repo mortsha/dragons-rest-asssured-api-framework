@@ -17,14 +17,14 @@ public class GetAccounTest extends APITestConfig {
 		String token = getValidToken();
 
 		RequestSpecification request = RestAssured.given();
-		request.queryParam("primaryPersonId", 7888);
+		request.queryParam("primaryPersonId", 8664);
 		request.header("Authorization", "Bearer " + token);
 
 		Response response = request.when().get(EndPoints.GET_ACCOUNT.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 200);
 		int primaryPersonId = response.jsonPath().get("primaryPerson.id");
-		Assert.assertEquals(primaryPersonId, 7888);
+		Assert.assertEquals(primaryPersonId, 8664);
 
 	}
 
