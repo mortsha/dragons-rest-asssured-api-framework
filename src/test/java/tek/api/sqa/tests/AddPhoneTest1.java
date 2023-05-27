@@ -13,33 +13,28 @@ import io.restassured.specification.RequestSpecification;
 import tek.api.sqa.base.APITestConfig;
 import tek.api.utility.EndPoints;
 
-public class CreateNewAccount extends APITestConfig{
-
+public class AddPhoneTest1 extends APITestConfig{
+	
 	@Test
-	public void createNewAccount() {
+	public void addPhoneTest1() {
 		String token = getValidToken();
-		
-		
 		Map<String,String> requestBody = new HashMap<>();
-		requestBody.put("email","mortrz0013@gmail.com");
-		requestBody.put("firstName", "Morteza");
-		requestBody.put("lastName", "Sharifi");
-		requestBody.put("title", "Mr.");
-		requestBody.put("gender", "MALE");
-		requestBody.put("maritalStatus", "SINGLE");
-		requestBody.put("employmentStatus", "Tester");
-		requestBody.put("dateOfBirth", "1996-11-28");
+		requestBody.put("phoneNumber", "2365487930");
+		requestBody.put("phoneExtension", "");
+		requestBody.put("phoneTime", "Morning");
+		requestBody.put("phoneType", "Mobile");
+		requestBody.put("current", "true");
 		
 		RequestSpecification request = RestAssured.given().body(requestBody);
+		request.queryParam("primaryPersonId", 8662);
 		request.header("Authorization" , "Bearer " + token);
 		request.contentType(ContentType.JSON);
-		Response response =request.when().post(EndPoints.CREATE_NEW_ACCOUNT.getValue());
+		Response response = request.when().post(EndPoints.ADD_PHONE.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 201);
-		String expectedEmail = response.jsonPath().get("email");
-		Assert.assertEquals(expectedEmail, "mortrz0013@gmail.com");
-		
+		String phoneNumber = response.jsonPath().get("phoneNumber");
+		Assert.assertEquals(phoneNumber, "2365487930");
 		
 	}
-	
+
 }

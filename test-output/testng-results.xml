@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-25T01:29:15 EDT" name="Default suite" finished-at="2023-05-25T01:29:17 EDT" duration-ms="2578">
+  <suite started-at="2023-05-27T00:18:04 EDT" name="Default suite" finished-at="2023-05-27T00:18:07 EDT" duration-ms="2999">
     <groups>
     </groups>
-    <test started-at="2023-05-25T01:29:15 EDT" name="Default test" finished-at="2023-05-25T01:29:17 EDT" duration-ms="2578">
-      <class name="tek.api.sqa.tests.CreateNewAccount">
-        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.CreateNewAccount@3214ee6]" started-at="2023-05-25T01:29:15 EDT" name="setupApiTest" finished-at="2023-05-25T01:29:15 EDT" duration-ms="243" status="PASS">
+    <test started-at="2023-05-27T00:18:04 EDT" name="Default test" finished-at="2023-05-27T00:18:07 EDT" duration-ms="2999">
+      <class name="tek.api.sqa.tests.AddAddressTest">
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.AddAddressTest@2bdd8394]" started-at="2023-05-27T00:18:04 EDT" name="setupApiTest" finished-at="2023-05-27T00:18:04 EDT" duration-ms="241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApiTest -->
-        <test-method signature="createNewAccount()[pri:0, instance:tek.api.sqa.tests.CreateNewAccount@3214ee6]" started-at="2023-05-25T01:29:15 EDT" name="createNewAccount" finished-at="2023-05-25T01:29:17 EDT" duration-ms="2139" status="PASS">
+        <test-method signature="addAddressToAccount()[pri:0, instance:tek.api.sqa.tests.AddAddressTest@2bdd8394]" started-at="2023-05-27T00:18:04 EDT" name="addAddressToAccount" finished-at="2023-05-27T00:18:07 EDT" duration-ms="2558" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewAccount -->
-      </class> <!-- tek.api.sqa.tests.CreateNewAccount -->
+        </test-method> <!-- addAddressToAccount -->
+      </class> <!-- tek.api.sqa.tests.AddAddressTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -38,4 +38,11 @@ public class APITestConfig extends BaseConfig {
 		String token = response.jsonPath().get("token");
 		return token;
     }
+    
+    private Object[][]validToken(){
+    	Object[][] data = {
+    			{"supervisor" , "tek_supervisor",}
+    	};
+    	return data;
+    }
 }
