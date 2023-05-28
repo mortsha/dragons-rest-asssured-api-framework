@@ -10,7 +10,9 @@ public enum EndPoints {
 	CREATE_NEW_ACCOUNT("/api/accounts/add-primary-account"),
 	ADD_PHONE("/api/accounts/add-account-phone"),
 	ADD_CAR("/api/accounts/add-account-car"),
-	ADD_ADDRESS("/api/accounts/add-account-address");
+	ADD_ADDRESS("/api/accounts/add-account-address"),
+	UPDATE_PHONE("/api/accounts/update-account-phone"),
+	UPDATE_ADDRESS("/api/accounts/update-account-address");
 	
 	private String value;
 

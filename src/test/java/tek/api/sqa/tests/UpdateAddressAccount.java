@@ -13,27 +13,33 @@ import io.restassured.specification.RequestSpecification;
 import tek.api.sqa.base.APITestConfig;
 import tek.api.utility.EndPoints;
 
-public class AddPhoneTest extends APITestConfig {
-
+public class UpdateAddressAccount extends APITestConfig {
+	
 	@Test
-	public void addPhoneToAccount () {
+	public void updateAddressAccount() {
 		String token = getValidToken();
-		Map<String,String> body = new HashMap<>();
-		body.put("phoneNumber", "2267895969");
-		body.put("phoneExtension", "");
-		body.put("phoneTime", "Morning");
-		body.put("phoneType", "Mobile");
-
+		
+		Map<String, String> body = new HashMap<>();
+		body.put("id", "2619");
+		body.put("addressType", "Home");
+		body.put("addressLine1", "9867 havid");
+		body.put("city", "Windsor");
+		body.put("state", "Ontraio");
+		body.put("postalCode", "45678");
+		body.put("countryCode", "");
+		body.put("current", "true");
+		
 		RequestSpecification request = RestAssured.given().body(body);
 		request.header("Authorization" , "Bearer " + token);
 		request.queryParam("primaryPersonId", 8720);
 		request.contentType(ContentType.JSON);
 		
-		Response response = request.when().post(EndPoints.ADD_PHONE.getValue());
+		Response response = request.when().put(EndPoints.UPDATE_ADDRESS.getValue());
 		response.prettyPrint();
-		Assert.assertEquals(response.getStatusCode(), 201);
-		String phoneNumber = response.jsonPath().get("phoneNumber");
-		Assert.assertEquals(phoneNumber, "2267895969");
+		Assert.assertEquals(response.getStatusCode(), 202);
+		
 		
 	}
+	
+
 }
