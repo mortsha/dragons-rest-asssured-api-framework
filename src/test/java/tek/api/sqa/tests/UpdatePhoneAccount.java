@@ -19,6 +19,7 @@ public class UpdatePhoneAccount extends APITestConfig{
 	public void updatePhoneAccount () {
 		String token = getValidToken();
 		
+		// update the phone account
 		Map<String, String> body = new HashMap<>();
 		body.put("id", "2809");
 		body.put("phoneNumber", "3210336667");
