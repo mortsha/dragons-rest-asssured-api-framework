@@ -1,5 +1,7 @@
 package tek.api.model;
 
+import java.util.Date;
+
 public class PrimaryAccount {
 
 	private long id;
@@ -10,7 +12,9 @@ public class PrimaryAccount {
 	private String gender;
 	private String maritalStatus;
 	private String employmentStatus;
-	private String dateOfBirth;
+	private Date dateOfBirth;
+	private Object user;
+	
 
 	// NoArgs constructor
 	public PrimaryAccount() {
@@ -18,7 +22,7 @@ public class PrimaryAccount {
 
 //  AllArgs constructor
 	public PrimaryAccount(long id, String email, String firstName, String lastName, String title, String gender,
-			String maritalStatus, String employmentStatus, String dateOfBirth) {
+			String maritalStatus, String employmentStatus, Date dateOfBirth, Object user) {
 		this.id = id;
 		this.email = email;
 		this.firstName = firstName;
@@ -32,7 +36,7 @@ public class PrimaryAccount {
 
 	// constructor without ID
 	public PrimaryAccount(String email, String firstName, String lastName, String title, String gender,
-			String maritalStatus, String employmentStatus, String dateOfBirth) {
+			String maritalStatus, String employmentStatus, Date dateOfBirth) {
 		this.email = email;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -107,11 +111,11 @@ public class PrimaryAccount {
 		this.employmentStatus = employmentStatus;
 	}
 
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
