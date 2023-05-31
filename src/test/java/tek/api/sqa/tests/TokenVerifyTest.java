@@ -16,7 +16,7 @@ public class TokenVerifyTest extends APITestConfig {
 		// Generate Valid token
 		String validToken = getValidToken();
 		RequestSpecification request = RestAssured.given();
-		request.queryParam("toke",validToken);
+		request.queryParam("token",validToken);
 		request.queryParam("username", "supervisor");
 		
 		Response response = request.when().get(EndPoints.TOKEN_VERIFY.getValue());
