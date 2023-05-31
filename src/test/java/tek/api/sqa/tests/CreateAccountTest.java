@@ -42,11 +42,11 @@ public class CreateAccountTest extends APITestConfig {
 
 		Response response = request.when().post(EndPoints.CREATE_NEW_ACCOUNT.getValue());
 		response.prettyPrint();
-		String actualEmail = response.jsonPath().getString("email");
 		Assert.assertEquals(response.getStatusCode(), 201);
 
-//		PrimaryAccount responseBody = response.as(PrimaryAccount.class);
-		Assert.assertEquals(actualEmail, requestBody.getEmail());
+		String actualEmail = response.jsonPath().getString("email");
+		PrimaryAccount responseBody = response.as(PrimaryAccount.class);
+		Assert.assertEquals(responseBody.getEmail(), requestBody.getEmail());
 	}
 
 }
