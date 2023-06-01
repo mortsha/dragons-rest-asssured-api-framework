@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tek.api.sqa.tests.HomeWork">
+      <class name="tek.api.sqa.tests.HomeWork2">
         <methods>
-          <include name="setupApiTest"/>
           <include name="getAccountWithDBQueryHomeWork"/>
+          <include name="setupApiTest"/>
         </methods>
-      </class> <!-- tek.api.sqa.tests.HomeWork -->
+      </class> <!-- tek.api.sqa.tests.HomeWork2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

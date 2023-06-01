@@ -35,7 +35,6 @@ public class HomeWork2 extends DatabaseConfig {
 		requestBody.setEmail(data.getEmail(firstName, lastName, "canada.com"));
 		requestBody.setFirstName(firstName);
 		requestBody.setLastName(lastName);
-		;
 		requestBody.setTitle("Mr.");
 		requestBody.setGender("MALE");
 		requestBody.setMaritalStatus("SINGLE");
@@ -62,7 +61,6 @@ public class HomeWork2 extends DatabaseConfig {
 
 		String returnAllAccountQuery = "select * from primary_person order by id desc";
 		ResultSet resultSet = runQuery(returnAllAccountQuery);
-//	
 
 		String token = getValidToken();
 		RequestSpecification request = RestAssured.given();
@@ -72,15 +70,12 @@ public class HomeWork2 extends DatabaseConfig {
 		Response response = request.when().get(EndPoints.GET_ACCOUNT.getValue());
 		Assert.assertEquals(response.getStatusCode(), 200);
 
-//		int actualPrimaryPersonId = response.jsonPath().get("primaryPerson.id");
-//		Assert.assertEquals(actualPrimaryPersonId, queryResultId);
-
 		String validateAccount = "select * from primary_person where id = " + accountId;
 		ResultSet validateAccountResult = runQuery(validateAccount);
-		
+
 		PrimaryAccount responseBody = response.jsonPath().getObject("primaryPerson", PrimaryAccount.class);
-		
-		if(validateAccountResult.next()) {
+
+		if (validateAccountResult.next()) {
 			String expectedEmail = validateAccountResult.getString("email");
 			String expectedFirstName = validateAccountResult.getString("first_name");
 			String expectedLastName = validateAccountResult.getString("last_name");
@@ -89,7 +84,7 @@ public class HomeWork2 extends DatabaseConfig {
 			String expectedMaritalStatus = validateAccountResult.getString("marital_status");
 			String expectedEmploymentStatus = validateAccountResult.getString("employment_status");
 			String expectedDateOfBirth = validateAccountResult.getString("date_of_birth");
-			
+
 			Assert.assertEquals(responseBody.getEmail(), expectedEmail);
 			Assert.assertEquals(responseBody.getFirstName(), expectedFirstName);
 			Assert.assertEquals(responseBody.getLastName(), expectedLastName);
@@ -98,11 +93,10 @@ public class HomeWork2 extends DatabaseConfig {
 			Assert.assertEquals(responseBody.getMaritalStatus(), expectedMaritalStatus);
 			Assert.assertEquals(responseBody.getEmploymentStatus(), expectedEmploymentStatus);
 //			Assert.assertEquals(responseBody.getDateOfBirth(), expectedDateOfBirth);
-			
-		}else {
+
+		} else {
 			Assert.fail("Test Fail validate account test did not return result for id " + accountId);
 		}
-		
 
 	}
 }
