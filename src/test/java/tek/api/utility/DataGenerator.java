@@ -45,7 +45,6 @@ public class DataGenerator {
 		try {
 			return formatter.parse(formattedDate);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			throw new RuntimeException("Date Parse Exception ");
 		}
 	}
