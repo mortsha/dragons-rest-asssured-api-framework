@@ -71,7 +71,7 @@
 				<version>2.19.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/runners/SmokeRunner.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/runners/RegressionRunner.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
