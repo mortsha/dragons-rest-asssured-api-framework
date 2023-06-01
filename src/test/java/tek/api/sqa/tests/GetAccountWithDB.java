@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import tek.api.model.PrimaryAccount;
 import tek.api.sqa.base.DatabaseConfig;
 import tek.api.utility.EndPoints;
 
@@ -29,8 +30,24 @@ public class GetAccountWithDB extends DatabaseConfig {
 
 		Response response = request.when().get(EndPoints.GET_ACCOUNT.getValue());
 		Assert.assertEquals(response.getStatusCode(), 200);
-		int actualPrimaryPersonId = response.jsonPath().get("primaryPerson.id");
-		Assert.assertEquals(actualPrimaryPersonId, queryResultId);
+
+		String secondQuery = "select * from primary_person where id = " + queryResultId;
+		ResultSet secondQueryResult = runQuery(secondQuery);
+
+		// get response from json path as Object.
+		PrimaryAccount responseBody = response.jsonPath().getObject("primaryPerson", PrimaryAccount.class);
+
+		if (secondQueryResult.next()) {
+			String expectedEmail = secondQueryResult.getString("email");
+			String expectedFirstName = secondQueryResult.getString("first_name");
+			Assert.assertEquals(responseBody.getEmail(), expectedEmail);
+			Assert.assertEquals(responseBody.getFirstName(), expectedFirstName);
+		} else {
+			Assert.fail("Test Fail Second query did not return result for id " + queryResultId);
+		}
+
+//		int actualPrimaryPersonId = response.jsonPath().get("primaryPerson.id");
+//		Assert.assertEquals(actualPrimaryPersonId, queryResultId);
 	}
 
 }

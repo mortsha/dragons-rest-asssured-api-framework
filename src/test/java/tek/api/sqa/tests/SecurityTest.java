@@ -86,9 +86,5 @@ public class SecurityTest extends APITestConfig {
 		};
 		return data;
 	}
-
-	public void testGetAllAccount() {
-
-	}
 	
 }

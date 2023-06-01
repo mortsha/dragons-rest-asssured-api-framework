@@ -32,6 +32,7 @@ public class PrimaryAccount {
 		this.maritalStatus = maritalStatus;
 		this.employmentStatus = employmentStatus;
 		this.dateOfBirth = dateOfBirth;
+		this.user = user;
 	}
 
 	// constructor without ID
@@ -117,6 +118,14 @@ public class PrimaryAccount {
 
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+	
+	public Object getUser() {
+		return user;
+	}
+	
+	public void setUser(Object user) {
+		this.user = user;
 	}
 
 }
