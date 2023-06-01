@@ -55,12 +55,12 @@ public class HomeWork2 extends DatabaseConfig {
 
 	}
 
-	@Test
+	@Test(dependsOnMethods = "createAccountHomeWorkTest" )
 	public void getAccountWithDBQueryHomeWork() throws SQLException {
 		String returnAllAccountQueryWithId = "select * from primary_person where id = " + accountId;
 
-		String returnAllAccountQuery = "select * from primary_person order by id desc";
-		ResultSet resultSet = runQuery(returnAllAccountQuery);
+		String returnAllAccountQuery = "select * from primary_person order by id desc"; 
+		ResultSet resultSet = runQuery(returnAllAccountQueryWithId);
 
 		String token = getValidToken();
 		RequestSpecification request = RestAssured.given();
