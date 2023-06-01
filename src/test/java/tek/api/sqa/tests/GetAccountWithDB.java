@@ -46,8 +46,7 @@ public class GetAccountWithDB extends DatabaseConfig {
 			Assert.fail("Test Fail Second query did not return result for id " + queryResultId);
 		}
 
-//		int actualPrimaryPersonId = response.jsonPath().get("primaryPerson.id");
-//		Assert.assertEquals(actualPrimaryPersonId, queryResultId);
+//	
 	}
 
 }
