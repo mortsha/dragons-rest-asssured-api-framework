@@ -35,7 +35,6 @@ public class HomeWork extends DatabaseConfig {
 		requestBody.setEmail(data.getEmail(firstName, lastName, "canada.com"));
 		requestBody.setFirstName(firstName);
 		requestBody.setLastName(lastName);
-		;
 		requestBody.setTitle("Mr.");
 		requestBody.setGender("MALE");
 		requestBody.setMaritalStatus("SINGLE");

@@ -92,7 +92,7 @@ public class HomeWork2 extends DatabaseConfig {
 			Assert.assertEquals(responseBody.getGender(), expectedGender);
 			Assert.assertEquals(responseBody.getMaritalStatus(), expectedMaritalStatus);
 			Assert.assertEquals(responseBody.getEmploymentStatus(), expectedEmploymentStatus);
-//			Assert.assertEquals(responseBody.getDateOfBirth(), expectedDateOfBirth);
+			Assert.assertEquals(responseBody.getDateOfBirth(), expectedDateOfBirth);
 
 		} else {
 			Assert.fail("Test Fail validate account test did not return result for id " + accountId);
