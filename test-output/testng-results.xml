@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-03T16:52:56 EDT" name="Default suite" finished-at="2023-06-03T16:52:59 EDT" duration-ms="2872">
+  <suite started-at="2023-06-03T17:08:30 EDT" name="Default suite" finished-at="2023-06-03T17:08:35 EDT" duration-ms="5174">
     <groups>
     </groups>
-    <test started-at="2023-06-03T16:52:56 EDT" name="Default test" finished-at="2023-06-03T16:52:59 EDT" duration-ms="2872">
+    <test started-at="2023-06-03T17:08:30 EDT" name="Default test" finished-at="2023-06-03T17:08:35 EDT" duration-ms="5174">
       <class name="tek.api.sqa.tests.HomeWork2">
-        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T16:52:56 EDT" name="setupApiTest" finished-at="2023-06-03T16:52:56 EDT" duration-ms="233" status="PASS">
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T17:08:30 EDT" name="setupApiTest" finished-at="2023-06-03T17:08:30 EDT" duration-ms="239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApiTest -->
-        <test-method signature="createAccountHomeWorkTest()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T16:52:56 EDT" name="createAccountHomeWorkTest" finished-at="2023-06-03T16:52:59 EDT" duration-ms="2427" status="PASS">
+        <test-method signature="createAccountHomeWorkTest()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T17:08:30 EDT" name="createAccountHomeWorkTest" finished-at="2023-06-03T17:08:33 EDT" duration-ms="2381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccountHomeWorkTest -->
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T17:08:33 EDT" name="setupApiTest" finished-at="2023-06-03T17:08:33 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApiTest -->
+        <test-method signature="getAccountWithDBQueryHomeWork()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T17:08:33 EDT" name="getAccountWithDBQueryHomeWork" finished-at="2023-06-03T17:08:35 EDT" depends-on-methods="tek.api.sqa.tests.HomeWork2.createAccountHomeWorkTest" duration-ms="2337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAccountWithDBQueryHomeWork -->
       </class> <!-- tek.api.sqa.tests.HomeWork2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

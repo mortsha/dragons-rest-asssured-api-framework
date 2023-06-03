@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tek.api.sqa.tests.CreateAccountWithDBVerification">
+      <class name="tek.api.sqa.tests.HomeWork2">
         <methods>
-          <include name="createAccountTestDB"/>
+          <include name="getAccountWithDBQueryHomeWork"/>
           <include name="setupApiTest"/>
+          <include name="createAccountHomeWorkTest"/>
         </methods>
-      </class> <!-- tek.api.sqa.tests.CreateAccountWithDBVerification -->
+      </class> <!-- tek.api.sqa.tests.HomeWork2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

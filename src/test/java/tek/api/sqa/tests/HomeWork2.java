@@ -96,11 +96,14 @@ public class HomeWork2 extends DatabaseConfig {
 			Assert.assertEquals(responseBody.getEmploymentStatus(), expectedEmploymentStatus);
 			String actualDOB = DateUtility.toDateString(responseBody.getDateOfBirth());
 			String expectedDOB = DateUtility.toDateString(expectedDateOfBirth);
-			Assert.assertEquals(actualDOB, expectedDateOfBirth);
+			System.out.println(actualDOB);
+			System.out.println(expectedDOB);
+			Assert.assertEquals(actualDOB, expectedDOB);
 
 		} else {
 			Assert.fail("Test Fail validate account test did not return result for id " + accountId);
 		}
 
 	}
+
 }
