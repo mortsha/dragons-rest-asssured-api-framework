@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-03T16:42:45 EDT" name="Default suite" finished-at="2023-06-03T16:42:48 EDT" duration-ms="3242">
+  <suite started-at="2023-06-03T16:52:56 EDT" name="Default suite" finished-at="2023-06-03T16:52:59 EDT" duration-ms="2872">
     <groups>
     </groups>
-    <test started-at="2023-06-03T16:42:45 EDT" name="Default test" finished-at="2023-06-03T16:42:48 EDT" duration-ms="3242">
-      <class name="tek.api.sqa.tests.CreateAccountWithDBVerification">
-        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.CreateAccountWithDBVerification@4167d97b]" started-at="2023-06-03T16:42:45 EDT" name="setupApiTest" finished-at="2023-06-03T16:42:45 EDT" duration-ms="245" status="PASS">
+    <test started-at="2023-06-03T16:52:56 EDT" name="Default test" finished-at="2023-06-03T16:52:59 EDT" duration-ms="2872">
+      <class name="tek.api.sqa.tests.HomeWork2">
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T16:52:56 EDT" name="setupApiTest" finished-at="2023-06-03T16:52:56 EDT" duration-ms="233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApiTest -->
-        <test-method signature="createAccountTestDB()[pri:0, instance:tek.api.sqa.tests.CreateAccountWithDBVerification@4167d97b]" started-at="2023-06-03T16:42:45 EDT" name="createAccountTestDB" finished-at="2023-06-03T16:42:48 EDT" duration-ms="2782" status="PASS">
+        <test-method signature="createAccountHomeWorkTest()[pri:0, instance:tek.api.sqa.tests.HomeWork2@4167d97b]" started-at="2023-06-03T16:52:56 EDT" name="createAccountHomeWorkTest" finished-at="2023-06-03T16:52:59 EDT" duration-ms="2427" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAccountTestDB -->
-      </class> <!-- tek.api.sqa.tests.CreateAccountWithDBVerification -->
+        </test-method> <!-- createAccountHomeWorkTest -->
+      </class> <!-- tek.api.sqa.tests.HomeWork2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

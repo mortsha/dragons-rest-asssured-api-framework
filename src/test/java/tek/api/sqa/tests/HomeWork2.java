@@ -2,6 +2,7 @@ package tek.api.sqa.tests;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,6 +14,7 @@ import io.restassured.specification.RequestSpecification;
 import tek.api.model.PrimaryAccount;
 import tek.api.sqa.base.DatabaseConfig;
 import tek.api.utility.DataGenerator;
+import tek.api.utility.DateUtility;
 import tek.api.utility.EndPoints;
 
 public class HomeWork2 extends DatabaseConfig {
@@ -83,7 +85,7 @@ public class HomeWork2 extends DatabaseConfig {
 			String expectedGender = validateAccountResult.getString("gender");
 			String expectedMaritalStatus = validateAccountResult.getString("marital_status");
 			String expectedEmploymentStatus = validateAccountResult.getString("employment_status");
-			String expectedDateOfBirth = validateAccountResult.getString("date_of_birth");
+			Date expectedDateOfBirth = validateAccountResult.getDate("date_of_birth");
 
 			Assert.assertEquals(responseBody.getEmail(), expectedEmail);
 			Assert.assertEquals(responseBody.getFirstName(), expectedFirstName);
@@ -92,7 +94,9 @@ public class HomeWork2 extends DatabaseConfig {
 			Assert.assertEquals(responseBody.getGender(), expectedGender);
 			Assert.assertEquals(responseBody.getMaritalStatus(), expectedMaritalStatus);
 			Assert.assertEquals(responseBody.getEmploymentStatus(), expectedEmploymentStatus);
-			Assert.assertEquals(responseBody.getDateOfBirth(), expectedDateOfBirth);
+			String actualDOB = DateUtility.toDateString(responseBody.getDateOfBirth());
+			String expectedDOB = DateUtility.toDateString(expectedDateOfBirth);
+			Assert.assertEquals(actualDOB, expectedDateOfBirth);
 
 		} else {
 			Assert.fail("Test Fail validate account test did not return result for id " + accountId);
