@@ -14,7 +14,6 @@ public class PrimaryAccount {
 	private String employmentStatus;
 	private Date dateOfBirth;
 	private Object user;
-	
 
 	// NoArgs constructor
 	public PrimaryAccount() {
@@ -119,11 +118,11 @@ public class PrimaryAccount {
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	
+
 	public Object getUser() {
 		return user;
 	}
-	
+
 	public void setUser(Object user) {
 		this.user = user;
 	}

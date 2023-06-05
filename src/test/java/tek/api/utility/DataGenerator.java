@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 import com.github.javafaker.Faker;
 
@@ -48,4 +49,56 @@ public class DataGenerator {
 			throw new RuntimeException("Date Parse Exception ");
 		}
 	}
+	public String getExtension() {
+		return faker.phoneNumber().extension();
+	}
+	
+	public String getPhoneNumber() {
+		return faker.phoneNumber().phoneNumber();
+	}
+	
+	public String getRandomLicense() {
+		Random random = new Random();
+		StringBuilder sb = new StringBuilder();
+		String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		int count = 4;
+		for (int i = 0; i < count; i++) {
+			int randomIndex = random.nextInt(letters.length());
+			char randomChar = letters.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		sb.append(" ");
+		for (int i = 0; i < 4; i++) {
+			int randomDigit = (int) (Math.random() * 10);
+			sb.append(randomDigit);
+		}
+		return sb.toString();
+	}
+	
+	public String getCountryCode() {
+		return faker.address().countryCode();
+				
+	}
+
+	public String getCity() {
+		return faker.address().city();
+		
+	}
+	
+	public String getState() {
+		return faker.address().state();
+	}
+	
+	public String getPostalCode() {
+		String phoneNumber = "";
+		for (int i = 0; i < 3; i++) {
+			phoneNumber += (int) (Math.random() * 100);
+		}
+		return phoneNumber;
+	}
+	
+	public String getAddressLine() {
+		return faker.address().fullAddress();
+	}
+	
 }
