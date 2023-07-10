@@ -62,7 +62,7 @@ public class CreateAccountWithCarTest extends DatabaseConfig {
 	}
 	
 	
-	public void assertCreatedAccountAddCar(PrimaryCarAccount responseBody, ResultSet queryResult) {
+	public static void assertCreatedAccountAddCar(PrimaryCarAccount responseBody, ResultSet queryResult) {
 		try {
 			if (queryResult.next()) {
 				asserter.isEqual(responseBody.getMake(), queryResult.getString("make"));

@@ -25,7 +25,7 @@ import org.testng.annotations.Test;
 public class APITestConfig extends BaseConfig {
 
 	private DataGenerator dataGenerator = new DataGenerator();
-	public Asserter asserter = new Asserter();
+	public static Asserter asserter = new Asserter();
 	
     @BeforeMethod
     public void setupApiTest() {
@@ -98,12 +98,13 @@ public class APITestConfig extends BaseConfig {
     
     public PrimaryAddressAccount addAddressData() {
     	PrimaryAddressAccount addressData = new PrimaryAddressAccount();
-    	addressData.setAddressLine(dataGenerator.getAddressLine());
+    	addressData.setAddressLine1(dataGenerator.getAddressLine1());
     	addressData.setAddressType("Home");
     	addressData.setCity(dataGenerator.getCity());
     	addressData.setCountryCode(dataGenerator.getCountryCode());
     	addressData.setPostalCode(dataGenerator.getPostalCode());
     	addressData.setState(dataGenerator.getState());
+    	addressData.setCurrent(true);
     	return addressData;
     	
     }

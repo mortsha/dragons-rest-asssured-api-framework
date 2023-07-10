@@ -3,36 +3,48 @@ package tek.api.model;
 public class PrimaryAddressAccount {
 
 	private long id;
-	private String addressLine;
+	private String addressLine1;
 	private String addressType;
 	private String city;
 	private String countryCode;
 	private String postalCode;
 	private String state;
+	private boolean current;
 
 	public PrimaryAddressAccount() {
 
 	}
 
 	public PrimaryAddressAccount(long id, String addressLine, String addressType, String city, String countryCode,
-			String postalCode, String state) {
+			String postalCode, String state, boolean current) {
 		this.id = id;
-		this.addressLine = addressLine;
+		this.addressLine1 = addressLine;
 		this.addressType = addressType;
 		this.city = city;
 		this.countryCode = countryCode;
 		this.postalCode = postalCode;
 		this.state = state;
+		this.current = current;
 	}
 
 	public PrimaryAddressAccount(String addressLine, String addressType, String city, String countryCode,
-			String postalCode, String state) {
-		this.addressLine = addressLine;
+			String postalCode, String state, boolean current) {
+		this.addressLine1 = addressLine;
 		this.addressType = addressType;
 		this.city = city;
 		this.countryCode = countryCode;
 		this.postalCode = postalCode;
 		this.state = state;
+		this.current = current;
+
+	}
+
+	public boolean getCurrent() {
+		return current;
+	}
+
+	public void setCurrent(boolean current) {
+		this.current = current;
 	}
 
 	public long getId() {
@@ -43,12 +55,12 @@ public class PrimaryAddressAccount {
 		this.id = id;
 	}
 
-	public String getAddressLine() {
-		return addressLine;
+	public String getAddressLine1() {
+		return addressLine1;
 	}
 
-	public void setAddressLine(String addressLine) {
-		this.addressLine = addressLine;
+	public void setAddressLine1(String addressLine) {
+		this.addressLine1 = addressLine;
 	}
 
 	public String getAddressType() {
