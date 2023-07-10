@@ -39,7 +39,7 @@ public class CreateAccountWithDBVerification extends DatabaseConfig {
 
 	}
 
-	public void assertCreatedAccount(PrimaryAccount responseBody, ResultSet queryResult) {
+	public static void assertCreatedAccount(PrimaryAccount responseBody, ResultSet queryResult) {
 		try {
 			if (queryResult.next()) {
 				asserter.isEqual(responseBody.getId(), queryResult.getLong("id"));

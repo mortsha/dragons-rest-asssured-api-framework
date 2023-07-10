@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-04T23:07:03 EDT" name="Default suite" finished-at="2023-06-04T23:07:09 EDT" duration-ms="5534">
+  <suite started-at="2023-07-10T03:46:58 EDT" name="Default suite" finished-at="2023-07-10T03:47:06 EDT" duration-ms="8028">
     <groups>
     </groups>
-    <test started-at="2023-06-04T23:07:03 EDT" name="Default test" finished-at="2023-06-04T23:07:09 EDT" duration-ms="5534">
-      <class name="tek.api.sqa.tests.CreateAccountWithCarTest">
-        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.CreateAccountWithCarTest@616ac46a]" started-at="2023-06-04T23:07:03 EDT" name="setupApiTest" finished-at="2023-06-04T23:07:04 EDT" duration-ms="235" status="PASS">
+    <test started-at="2023-07-10T03:46:58 EDT" name="Default test" finished-at="2023-07-10T03:47:06 EDT" duration-ms="8028">
+      <class name="tek.api.sqa.tests.E2EAccountCreateTest">
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.E2EAccountCreateTest@4167d97b]" started-at="2023-07-10T03:46:58 EDT" name="setupApiTest" finished-at="2023-07-10T03:46:59 EDT" duration-ms="238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApiTest -->
-        <test-method signature="createAccountAddCarTest()[pri:0, instance:tek.api.sqa.tests.CreateAccountWithCarTest@616ac46a]" started-at="2023-06-04T23:07:04 EDT" name="createAccountAddCarTest" finished-at="2023-06-04T23:07:09 EDT" duration-ms="5096" status="PASS">
+        <test-method signature="e2EAccountCreate()[pri:0, instance:tek.api.sqa.tests.E2EAccountCreateTest@4167d97b]" started-at="2023-07-10T03:46:59 EDT" name="e2EAccountCreate" finished-at="2023-07-10T03:47:06 EDT" duration-ms="7572" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAccountAddCarTest -->
-      </class> <!-- tek.api.sqa.tests.CreateAccountWithCarTest -->
+        </test-method> <!-- e2EAccountCreate -->
+      </class> <!-- tek.api.sqa.tests.E2EAccountCreateTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

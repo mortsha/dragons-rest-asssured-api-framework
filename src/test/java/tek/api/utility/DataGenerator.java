@@ -97,8 +97,8 @@ public class DataGenerator {
 		return phoneNumber;
 	}
 	
-	public String getAddressLine() {
-		return faker.address().fullAddress();
+	public String getAddressLine1() {
+		return faker.address().streetAddressNumber().concat(" ").concat(faker.address().streetName());
 	}
 	
 }

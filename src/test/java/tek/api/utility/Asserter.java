@@ -14,6 +14,11 @@ public class Asserter {
 		Assert.assertEquals(actual, expected);
 
 	}
+	public void isEqual(boolean actual, boolean expected) {
+		Assert.assertEquals(actual, expected);
+
+	}
+
 
 	public void isEqual(int actual, int expected) {
 		Assert.assertEquals(actual, expected);
